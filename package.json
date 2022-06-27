@@ -1,0 +1,22 @@
+{
+  "name": "scaling-lamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckaikai19/scaling-lamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckaikai19/scaling-lamp/issues"
+  },
+  "homepage": "https://github.com/ckaikai19/scaling-lamp#readme"
+}
