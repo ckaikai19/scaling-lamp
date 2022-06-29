@@ -1,21 +1,24 @@
 const User = require('./User');
 const Project = require('./Project');
-const Member = require('./Member');
+// const Member = require('./Member');
+const Discussion = require('./Discussion');
 
 User.hasMany(Project, { 
-    foreignKey: 'user_id' 
+    foreignKey: 'project_id' 
 });
 
 Project.belongsTo(User, {
-    foreignKey: 'user_id'
-});
-
-Project.hasMany(Member, {
     foreignKey: 'project_id'
 });
 
-Member.belongsTo(Project, {
-    foreignKey: 'project_id'
+User.hasMany(Discussion, {
+    foreignKey: 'discussion_id'
 });
 
-module.exports = { User, Project, Member };
+Discussion.belongsTo(User, {
+    foreignKey: 'discussion_id'
+});
+
+
+
+module.exports = { User, Project, Discussion };

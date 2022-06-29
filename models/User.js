@@ -19,17 +19,30 @@ User.init(
         username: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                notNull: {
+                  msg: 'Please enter your name'
+                }
+            }
         },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                is: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/,
+                notNull: {
+                    msg: 'Please enter a password'
+                },
+            },
         },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [6],
-              },
+                isEmail: {
+                    msg: 'Please enter a valid email'
+                }
+            }
         },
     },
     {
@@ -42,7 +55,7 @@ User.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'users',
+        modelName: 'user',
     }
 );
         

@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class Discussion extends Model {}
 
-Project.init(
+Discussion.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,23 +11,19 @@ Project.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        project_name: {
+        discussion_title: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        project_description: {
+        discussion_description: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        project_status: {
+        discussion_status: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        github_link: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        project_id: {
+        discussion_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
@@ -39,8 +35,8 @@ Project.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'project',
+        modelName: 'discussion',
     }
 );
 
-module.exports = Project;
+module.exports = Discussion;
