@@ -1,0 +1,23 @@
+[
+    {
+        "project_name": "Project 1",
+        "project_description": "This is project 1",
+        "project_status": "In Progress",
+        "github_link": "https://github.com/ide/project1",
+        "project_id": "1"
+    },
+    {
+        "project_name": "Project 2",
+        "project_description": "This is project 2",
+        "project_status": "In Progress",
+        "github_link": "https://github.com/sdfsdf/project2",
+        "project_id": "2"
+    },
+    {
+        "project_name": "Project 3",
+        "project_description": "This is project 3",
+        "project_status": "In Progress",
+        "github_link": "https://github.com/sdddd/project3",
+        "project_id": "3"
+    }
+]
