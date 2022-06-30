@@ -1,0 +1,20 @@
+[
+    {
+        "discussion_title": "Discussion Title 1",
+        "discussion_description": "Discussion Description 1",
+        "discussion_status": "In Progress",
+        "discussion_id": "2"
+    },
+    {
+        "discussion_title": "Discussion Title 2",
+        "discussion_description": "Discussion Description 2",
+        "discussion_status": "In Progress",
+        "discussion_id": "1"
+    },
+    {
+        "discussion_title": "Discussion Title 3",
+        "discussion_description": "Discussion Description 3",
+        "discussion_status": "Ended",
+        "discussion_id": "3"
+    }
+]
