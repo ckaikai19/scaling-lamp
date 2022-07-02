@@ -3,8 +3,13 @@ const { Project, Discussion, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-router.get('/',(req, res) => {
-    res.render('index');
+router.get('/register',(req, res) => {
+    res.render('', { title: 'register'});
+    });
+
+
+router.get('/', (req, res) => {
+    res.render('startup');
     });
 
 module.exports = router;
