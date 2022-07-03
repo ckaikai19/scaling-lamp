@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.png">
+    <title>GitChat</title>
+    <link rel="stylesheet" href="/styles/dashboard.css">
+    <script src="https://kit.fontawesome.com/17aa9ecf2c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+        <div>
+            <img id="logo" src="/img/logo.png" width="56.27" height="63">
+            <span id="dashboard-title">Dashboard</span>
+        </div>
+
+        <button id="logout-button">Logout</button>
+    </header>
+
+
+    <div class="dashboard">
+        <div>
+            <i class="fa-solid search-icon fa-magnifying-glass"></i>
+            <input class="search" type="text" placeholder="Mike Johnson">
+        </div>
+
+        <div class="options">
+            <button id="create-button">Create A Chat</button>
+            <button id="github-button">Github</button>
+            <button id="other-button">Other</button>
+        </div>
+
+
+        <div class="users">
+            
+            <div>
+                <div id="outer-box">
+                    <div id="user-box">
+                        <img src="./img/online-status.png" width="10" height="10">
+                        <span class="name">John Appleseed</span>
+                    </div>
+                    <span id="time-joined">8:00</span>
+                </div>
+                <hr>
+            </div>
+
+            <div>
+                <div id="outer-box">
+                    <div id="user-box">
+                        <img src="./img/online-status.png" width="10" height="10">
+                        <span class="name">John Appleseed</span>
+                    </div>
+                    <span id="time-joined">8:00</span>
+                </div>
+                <hr>
+            </div>
+
+        </div>
+
+
+        <div class="posts">
+            
+            <div class="single-post">
+                <div class="title-box">
+                    <h1>What's The Best Programming Language</h1>
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i  class="fa-solid fa-thumbs-down"></i>
+                    </div>
+                </div>
+
+                <div class="about">
+                    <h1 class="author">Samantha Martin</h1><span class="date-posted">8:00</span>
+                </div>
+
+                <h1 class="details">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </h1>
+            </div>
+
+            <div class="single-post">
+                <div class="title-box">
+                    <h1>What's The Best Programming Language</h1>
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i class="fa-solid fa-thumbs-down"></i>
+                    </div>
+                </div>
+
+                <div class="about">
+                    <h1 class="author">Samantha Martin</h1><span class="date-posted">8:00</span>
+                </div>
+
+                <h1 class="details">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </h1>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div id="create-box" class="create-box">
+
+        <div class="create">
+            <div class="title-box-2">
+                <h1>Title</h1>
+                <input id="title-input" class="title-input" placeholder="What is the most interesting thing you know about space?"type="text">
+            </div>
+
+            <div class="description-box">
+                <h1>Description</h1>
+                <textarea cols="30" rows="10" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,"></textarea>
+            </div>
+
+            <div class="topic-box">
+                <h1>Select Subject</h1>
+                <div class="topic-button-box">
+                    <button id="github-subject-button">Github</button>
+                    <button id="other-subject-button">Other</button>
+                </div>
+            </div>
+
+            <button id="create-post-button">Create Chat Room</button>
+        </div>
+
+        <i id='exit-button' class="fa-solid exit fa-circle-xmark"></i>
+    </div> 
+
+
+</body>
+<script src="/js/dashboard-styles.js"></script>
+</html>
