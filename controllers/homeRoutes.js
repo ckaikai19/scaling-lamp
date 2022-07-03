@@ -12,4 +12,7 @@ router.get('/', (req, res) => {
     res.render('startup');
     });
 
+router.post('/', (req, res) => {    
+    return res.json(req.body);
+    });
 module.exports = router;
