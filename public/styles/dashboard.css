@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,600;0,700;1,200;1,400;1,600;1,700&display=swap');
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    user-select: none;
+}
+
+
+body{
+    background: linear-gradient(47deg, #4C406D 59%, #4f3f80 82%);
+}
+
+#dashboard-title{
+    color: #D3D3D3;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    bottom: 23px;
+    left: 5px;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 18px;
+}
+
+#logout-button{
+    background: #DA8E68;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    padding: px;
+    width: 114px;
+    height: 39px;
+    transition: background 0.4s;
+    position: relative;
+    top: 13px;
+}
+
+#logout-button:hover{
+    cursor: pointer;
+    background: #c78260;
+}
+
+.dashboard{
+    /* border: 1px solid white; */
+    margin: 10px 18px;
+    display: grid;
+    grid-template-areas: 
+    "search options options"
+    "users posts posts";
+    grid-template-columns: minmax(auto, 365px);
+}
+
+
+.search{
+    background: #5E4F86;
+    border: none;
+    border-radius: 4px;
+    height: 57px;
+    color: rgba(195, 195, 195, 1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;       
+    grid-area: search;
+    outline: none;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.05);
+    width: calc(100% - 50px);
+    padding-left: 50px;
+}
+
+.search:hover{
+    cursor: pointer;
+}
+
+.search-icon{
+    font-size: 25px;
+    color: white;
+    position: relative;
+    top: 43px;
+    left: 8px;
+    transition: color 0.3s;
+}
+
+.search-icon:hover{
+    color: #39BEAF;
+    cursor: pointer;
+    
+}
+
+.options{
+    grid-area: options;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#create-button{
+    width: 146px;
+    height: 57px;
+    background: #39BEAF;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    transition: background 0.2s;
+    margin: 0px 0px 0px 14px;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.05);
+
+
+
+}
+
+#create-button:hover{
+    cursor: pointer;
+    background: #35afa0;
+}
+
+#github-button, #other-button{
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #5E4F86;
+    width: 146px;
+    height: 57px;
+    transition: background 0.4s;
+    margin: 0px 0px 0px 14px;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.05);
+
+
+}
+
+#github-button:hover,  #other-button:hover{
+    cursor: pointer;
+    background: #534776;
+}
+
+
+.users{
+    grid-area: users;
+    /* border: 2px solid orange; */
+    height: calc(100vh - 225px);
+    border-radius: 4px;
+    background: #5E4F86;
+    overflow: scroll;
+    overflow-x: hidden;
+    /* box-shadow: 0px 1px 50px -17px #000000; */
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.05);
+
+}
+
+.users div{
+    /* border: 1px solid green; */
+    /* box-shadow: 0px 1px 50px -17px #000000; */
+    cursor: pointer;
+}
+
+
+#outer-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-box{
+    /* border: 2px solid pink; */
+    margin: 25px;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
+#time-joined{
+    /* border: 2px solid pink; */
+    position: relative;
+    right: 28px;
+    padding: 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #D1D1D1;
+    top: 26px;
+}
+hr{
+    margin-top: 10px;
+    opacity: 0.3;
+    width: 80%;
+}
+
+.posts{
+    grid-area: posts;
+    /* border: 2px solid orange; */
+    margin-left: 17px;
+    overflow: scroll;
+    height: calc(100vh - 205px);
+}
+
+.users, .posts{
+    margin-top: 25px;
+}
+
+.single-post{
+    /* border: 1px solid saddlebrown; */
+    padding: 10px;
+    border-radius: 4px;
+    background: #5E4F86;
+    /* opacity: 0.5; */
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.05);
+
+}
+
+.single-post:hover{
+    cursor: pointer;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.2);
+
+}
+
+
+.title-box{
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-box h1{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.title-box i{
+    font-size: 26px;
+    color: white;
+    margin-top: 13px;
+    margin-right: 10px;
+}
+
+.title-box i:hover{
+    cursor: pointer;
+    color: rgb(229, 229, 229);
+}
+
+.about{
+    display: flex;
+    /* border: 1px solid green; */
+    margin-top: -14px;
+}
+
+.author{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    color: #e7e7e7;
+    display: flex;
+    width: 150px;
+    opacity: 0.8;
+}
+
+
+.date-posted{
+    /* border: 1px solid red; */
+    margin-left: 20px;
+    position: relative;
+    top: 7px;
+    color: #e7e7e7;
+    opacity: 0.8;
+
+}
+
+.details{
+    /* border: 1px solid peachpuff; */
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    color: #e7e7e7;
+    height: 82px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.create-box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top : 0px;
+    left: 0px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create{
+    width: 635px;
+    height: 681px;
+    margin-top: 50px;
+    background: linear-gradient(47deg, #4C406D 59%, #4f3f80 82%);
+    border-radius: 8px;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.35);
+    padding: 20px;
+}
+
+.create div{
+    margin-bottom: 20px;
+}
+
+.exit{
+    font-size: 50px;
+    color: #DA8E68;
+    position: relative;
+    bottom: 328px;
+    right: 37px;
+}
+
+.exit:hover{
+    cursor: pointer;
+    color: #cb8562;
+}
+
+
+.title-box-2, .description-box, .topic-box{
+    /* border: 1px solid green; */
+    display: block;
+    
+}
+
+.title-box-2 h1, .description-box h1, .topic-box h1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+}
+
+.title-input, .description-input{
+    background: #5E4F86;
+    height: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    width: 98%;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.04);
+
+}
+
+textarea{
+    resize: none;
+    width: calc(100% - 20px);
+    height: 320px;
+    border-radius: 6px;
+    background: #5E4F86;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 34px;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.04);
+
+}
+
+
+#github-subject-button, #other-subject-button{
+    width: 114px;
+    height: 48.51px;
+    background: #5E4F86;
+    border: none;
+    /* border: 2px solid #DA8E68; */
+    border-radius: 4px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.04);
+    margin-right: 10px;
+    
+
+}
+
+#github-subject-button:hover, #other-subject-button:hover{
+    cursor: pointer;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.09);
+
+}
+
+#create-post-button{
+    background: #39BEAF;
+    border-radius: 4px;
+    border: none;
+    width: 210px;
+    height: 57px;
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.04);
+    
+}
+
+#create-post-button:hover{
+    cursor: pointer;
+    background: #32a89a;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.09);
+
+    
+}
+
+.create-box{
+    display: none;
+    transition: display 0.4s;
+}
+
+
+
+::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 0px
+  }
+  

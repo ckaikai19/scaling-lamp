@@ -2,17 +2,20 @@ const router = require('express').Router();
 const { Project, Discussion, User } = require('../models');
 const withAuth = require('../utils/auth');
 
-
-router.get('/register',(req, res) => {
-    res.render('', { title: 'register'});
-    });
+router.get('/landing', (req, res) => {
+    res.render('landing');
+});
 
 
 router.get('/', (req, res) => {
-    res.render('startup');
-    });
+    res.render('dashboard');
+});
 
-router.post('/', (req, res) => {    
-    return res.json(req.body);
-    });
+
+router.get('/chatroom', (req, res) => {
+    res.render('chatroom');
+});
+
+
 module.exports = router;
+

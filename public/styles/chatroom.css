@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,600;0,700;1,200;1,400;1,600;1,700&display=swap');
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    /* border: 1px solid white; */
+    user-select: none;
+}
+
+
+body{
+    /* background-color: #60508e; */
+    background: linear-gradient(47deg, #4C406D 59%, #4f3f80 82%);
+}
+
+#dashboard-title{
+    color: #D3D3D3;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+    bottom: 23px;
+    left: 5px;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+    margin: 18px;
+    margin-bottom: 40px;
+}
+
+#logout-button{
+    background: #DA8E68;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    padding: px;
+    width: 114px;
+    height: 39px;
+    transition: background 0.4s;
+    position: relative;
+    top: 13px;
+}
+
+#logout-button:hover{
+    cursor: pointer;
+    background: #c78260;
+}
+
+.chatroom{
+    margin: 10px 18px;
+    display: grid;
+    grid-template-areas: 
+    "options chat chat"
+    "view chat chat";
+    grid-template-columns: minmax(auto, 365px);
+
+}
+
+.tabs{
+    grid-area: options;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+
+#details, #users{
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: #534776;
+    width: 175px;
+    height: 57px;
+    transition: background 0.4s;
+    /* margin: 0px 0px 0px 14px; */
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.05);
+    /* border: 1px solid white; */
+    position: relative;
+    bottom: 13px;
+}
+
+#details:hover, #users:hover{
+    cursor: pointer;
+    background: #4C406D;
+
+}
+
+#details{
+    border: 2px solid #DA8E68;
+}
+
+.view{
+    grid-area: view;
+    height: calc(100vh - 280px);
+    border-radius: 4px;
+    background: #5E4F86;
+    margin-top: 15px;
+    /* border: 1px solid black; */
+    padding: 10px;
+}
+
+
+#post-title{
+    /* border: 1px solid green; */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    font-style: normal;
+    font-weight: 500;   
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-align: left;
+
+}
+
+.top{
+    /* border: 1px solid green; */
+    width: 100%;
+    display: block;
+}
+
+#post-description{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+    /* height: 450px; */
+    /* border: 1px solid white; */
+    /* height: 200%; */
+    /* overflow: hidden; */
+}
+
+
+.extra{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+
+
+}
+
+.extra h1{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    color: #FFFFFF;
+    /* border: 1px solid green; */
+}
+
+
+.users{
+    cursor: pointer;
+    display: none;
+}
+
+#outer-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+#user-box{
+    /* border: 2px solid pink; */
+    margin: 25px;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
+#time-joined{
+    /* border: 2px solid pink; */
+    position: relative;
+    right: 28px;
+    padding: 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #D1D1D1;
+    top: 26px;
+}
+
+hr{
+    margin-top: 10px;
+    opacity: 0.3;
+    width: 80%;
+}
+
+
+.chat{
+    grid-area: chat;
+    box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.18);
+    border-radius: 4px;
+    background: linear-gradient(47deg, #4C406D 59%, #4f3f80 82%);
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.message-box{
+    /* border: 1px solid white; */
+    height: calc(100% - 120px);
+    padding: 10px;
+    width: 100%;
+
+    overflow: scroll;
+}    
+
+
+.message-input{
+    /* border: 1px solid white; */
+    /* height: 100px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+}
+
+.other-message-box{
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-message-box{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.left-message-box{
+    /* border: 1px solid pink; */
+    /* padding: 30px; */
+    width: 40%;
+    margin-left: 10px;
+}
+
+
+.right-message-box{
+    width: 40%;
+    margin-right: 10px;
+}
+
+
+.top-mesage{
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-mesage h1{
+    /* border: 1px solid grey; */
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: #dbdbdb;
+}
+
+
+#left-message-message{
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+    padding: 10px;
+    background: #3d3358;
+    border-radius: 8px;
+    position: relative;
+    bottom: 10px;
+}
+
+#right-message-message{
+    font-style: normal; 
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+    padding: 10px;
+
+    position: relative;
+    bottom: 10px;
+
+
+    background: #DA8E68;
+    border-radius: 8px;
+}
+
+
+
+
+.chat input {
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 16px;
+    padding: 15px 0px 15px 60px;
+
+
+    /* position: relative; */
+
+}
+
+.max {
+    /* border: 1px solid orange; */
+    width: 78%;
+    /* margin-top: 10px; */
+    margin-left: 10px;
+}
+
+.smile{
+    font-size: 33px;
+    position:relative;
+    top: 45px;
+    left: 10px;
+    color: rgb(137, 137, 137);
+}
+
+.send{
+    color: green;
+    font-size: 60px;
+    position: relative;
+    top: 30px;
+    margin-right: 10px;
+    /* box-shadow: 0px 1px 22px 2px rgba(0,0,0,0.15); */
+
+}
+.send:hover{
+    cursor: pointer;
+}
+
+
+::-webkit-scrollbar {
+    width: 0px
+  }
+  

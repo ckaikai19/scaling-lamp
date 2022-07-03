@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.png">
+    <title>GitChat</title>
+    <link rel="stylesheet" href="/styles/chatroom.css">
+    <script src="https://kit.fontawesome.com/17aa9ecf2c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+        <div>
+            <img id="logo" src="./img/logo.png" width="56.27" height="63">
+            <span id="dashboard-title">Chat Room</span>
+        </div>
+
+        <button id="logout-button">Leave</button>
+    </header>
+
+    <div class="chatroom">
+
+        <div class="tabs">
+            <button id="details">Details</button>
+            <button id="users">Users</button>
+        </div>
+
+        <div class="view">
+
+            <div id="details-tab" class="details">
+
+                <div class="top"> 
+                    <h1 id="post-title">
+                        What’s The Best Programming Language?
+                    </h1>
+    
+                    <p id="post-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    </p>
+                </div>
+
+                <div class="extra">
+                    <h1 id="author">Samantha Martin</h1>
+                    <h1 id="time-posted">8:00</h1>
+                </div>
+
+            </div>
+
+            <div id="user-tab" class="users">
+                <div>
+                    <div id="outer-box">
+                        <div id="user-box">
+                            <img src="./img/online-status.png" width="10" height="10">
+                            <span class="name">John Appleseed</span>
+                        </div>
+                        <span id="time-joined">8:00</span>
+                    </div>
+                    <hr>
+                </div>
+
+                <div>
+                    <div id="outer-box">
+                        <div id="user-box">
+                            <img src="./img/online-status.png" width="10" height="10">
+                            <span class="name">John Appleseed</span>
+                        </div>
+                        <span id="time-joined">8:00</span>
+                    </div>
+                    <hr>
+                </div>
+
+                <div>
+                    <div id="outer-box">
+                        <div id="user-box">
+                            <img src="./img/online-status.png" width="10" height="10">
+                            <span class="name">John Appleseed</span>
+                        </div>
+                        <span id="time-joined">8:00</span>
+                    </div>
+                    <hr>
+                </div>               
+            </div>
+
+        </div>
+
+        <div class="chat">
+            
+            <div class="message-box">
+                
+                <div class="other-message-box">              
+                    <div class="left-message-box">
+                        <div class="top-mesage">
+                            <h1 id="left-message-name">Samantha Martin</h1>
+                            <h1 id="left-message-date"> 8:00</h1>
+                        </div>
+
+                        <h1 id="left-message-message">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                        </h1>
+                    </div>
+                </div>
+
+
+                <div class="main-message-box">
+                    <div class="right-message-box">
+                        <div class="top-mesage">
+                            <h1 id="left-message-name">Samantha Martin</h1>
+                            <h1 id="left-message-date"> 8:00</h1>
+                        </div>
+
+                        <h1 id="right-message-message">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="other-message-box">              
+                    <div class="left-message-box">
+                        <div class="top-mesage">
+                            <h1 id="left-message-name">Samantha Martin</h1>
+                            <h1 id="left-message-date"> 8:00</h1>
+                        </div>
+
+                        <h1 id="left-message-message">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="main-message-box">
+                    <div class="right-message-box">
+                        <div class="top-mesage">
+                            <h1 id="left-message-name">Samantha Martin</h1>
+                            <h1 id="left-message-date"> 8:00</h1>
+                        </div>
+
+                        <h1 id="right-message-message">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                        </h1>
+                    </div>
+                </div>
+
+
+            </div>
+            
+            
+            <div class="message-input">
+                <div class="max">
+                    <i class="fa-solid smile fa-face-smile"></i>
+                    <input type="text" placeholder="Type a message">
+                </div>
+                
+                <i class="fa-solid send fa-circle-arrow-up"></i>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+<script src="/js/chatroom-styles.js"></script>
+</html>
