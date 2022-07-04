@@ -1,10 +1,8 @@
-// const router = require('express').Router();
-// const userRoutes = require('./userRoutes');
-// const projectRoutes = require('./projectRoutes');
-// const discussionRoutes = require('./discussionRoutes');
+const router = require('express').Router();
+const userRoutes = require('./userRoutes');
+const newpostRoutes = require('./newpostRoutes');
 
-// router.use('/users', userRoutes);
-// router.use('/projects', projectRoutes);
-// router.use('/discussions', discussionRoutes);
+router.use('/users', userRoutes);
+router.use('/newpost', newpostRoutes);
 
-// module.exports = router;
+module.exports = router;
