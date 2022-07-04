@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers/index');
 const helpers = require('./utils/helpers');
+const bodyParser = require('body-parser');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -30,8 +31,9 @@ app.use(session(sess));
 app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', 'hbs');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);

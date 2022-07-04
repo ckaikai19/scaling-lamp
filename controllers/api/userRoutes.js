@@ -1,31 +1,44 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Discussion } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
     try {
-      const userData = await User.create(req.body);
-  
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.logged_in = true;
-  
-        res.status(200).json(userData);
-      });
+        const user = await User.create(req.body);
+        // const dbDiscussionData = await Discussion.findAll({
+        //   include: [
+        //     {
+        //       model: User,
+        //       attributes: ['username'],
+        //     },
+        //   ],
+        // });
+
+        req.session.save(() => {
+          req.session.user_id = user.id;
+          req.session.loggedIn = true;
+        });
+
+        // const discussions = dbDiscussionData.map((discussion) =>
+        // discussion.get({ plain: true })
+        // );
+    
+        //redirect to dashboard
+        res.redirect('/dashboard');
     } catch (err) {
-      res.status(400).json(err);
+        res.status(400).json(err);
     }
 });
 
 
 router.post('/login', async (req, res) => {
     try {
-      const userData = await User.findOne({ where: { email: req.body.email } });
+      const userData = await User.findOne({ where: { username: req.body.username } });
   
       if (!userData) {
         res
           .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
+          .json({ message: 'Incorrect username or password, please try again' });
         return;
       }
   
@@ -41,9 +54,9 @@ router.post('/login', async (req, res) => {
       req.session.save(() => {
         req.session.user_id = userData.id;
         req.session.logged_in = true;
-        
-        res.json({ user: userData, message: 'You are now logged in!' });
       });
+
+      res.redirect('/dashboard');
   
     } catch (err) {
       res.status(400).json(err);
