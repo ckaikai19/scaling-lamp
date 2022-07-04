@@ -1,0 +1,62 @@
+body {
+  background-color: powderblue;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.btn--primary {
+  position: absolute;
+  width: 180px;
+  height: 75px;
+  left: 1180px;
+  top: 27px;
+  border-radius: 20px;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 32px 36px;
+  color: #050505;
+  background: rgb(81, 25, 133);
+  color: white;
+  box-shadow: 8px 12px 10px 2px #000000;
+}
+
+.btn--primary:hover {
+  background: rgb(166, 15, 166);
+  cursor:grab
+}
+
+.btn--secondary {
+  position: absolute;
+  width: 180px;
+  height: 80px;
+  left: 223px;
+  top: 540px;
+  border-radius: 20px;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 32px 36px;
+  background: rgb(43, 158, 190);
+  color: white;
+  box-shadow: 8px 12px 10px 2px #000000;
+
+}
+.btn--secondary:hover {
+  background: rgb(24, 206, 167);
+  cursor:grab
+
+}
