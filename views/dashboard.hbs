@@ -94,25 +94,26 @@
 <div id="create-box" class="create-box">
 
     <div class="create">
-        <div class="title-box-2">
-            <h1>Title</h1>
-            <input id="title-input" class="title-input" placeholder="What is the most interesting thing you know about space?"type="text">
-        </div>
-
-        <div class="description-box">
-            <h1>Description</h1>
-            <textarea cols="30" rows="10" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,"></textarea>
-        </div>
-
-        <div class="topic-box">
-            <h1>Select Subject</h1>
-            <div class="topic-button-box">
-                <button id="github-subject-button">Github</button>
-                <button id="other-subject-button">Other</button>
+        <form action="/api/newpost" method="post">
+            <div class="title-box-2">
+                <h1>Title</h1>
+                <input id="title-input" class="title-input" placeholder="What is the most interesting thing you know about space?"type="text">
             </div>
-        </div>
 
-        <button id="create-post-button">Create Chat Room</button>
+            <div class="description-box">
+                <h1>Description</h1>
+                <textarea cols="30" rows="10" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,"></textarea>
+            </div>
+
+            <div class="topic-box">
+                <h1>Select Subject</h1>
+                <div class="topic-button-box">
+                    <button id="github-subject-button">Github</button>
+                    <button id="other-subject-button">Other</button>
+                </div>
+            </div>        
+            <button id="create-post-button" type="submit">Create Chat Room</button>
+        </form>
     </div>
 
     <i id='exit-button' class="fa-solid exit fa-circle-xmark"></i>
