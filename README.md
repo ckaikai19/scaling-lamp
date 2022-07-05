@@ -8,18 +8,25 @@ GitChat is a web-based service in which users can create, choose and comment on 
 
 ## Contributing
 
-Chris Kaikai
-Brendan Munroe
-Yuchen Cui
-Trevor Boyd
+* Chris Kaikai
+* Brendan Munroe
+* Yuchen Cui
+* Trevor Boyd
 
 ## Sample
 
 <img width="1420" alt="image" src="https://user-images.githubusercontent.com/105176171/177364651-23b9f1b4-78ce-4c55-b26e-65a9c9f5d76e.png">
 
-
 ## Technologies
 
+* HTML
+* CSS
+* JS
+* Socket.io
+* SQL
+* Express js
+* Insomnia
+* Handlebars js
 
 
 ## License
