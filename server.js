@@ -13,11 +13,15 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ 
+  helpers,
+  defaultLayout: 'main',
+  extname: 'hbs' 
+});
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  // cookie: { maxAge: 60000 },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -28,7 +32,8 @@ const sess = {
 app.use(session(sess));
 
 // Inform Express.js on which template engine to use
-app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
+
+app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
 
