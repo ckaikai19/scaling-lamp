@@ -21,11 +21,11 @@ Project.init(
         },
         project_status: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         github_link: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         project_id: {
             type: DataTypes.INTEGER,

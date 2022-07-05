@@ -21,7 +21,7 @@ Discussion.init(
         },
         discussion_status: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         discussion_id: {
             type: DataTypes.INTEGER,

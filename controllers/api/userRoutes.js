@@ -9,8 +9,8 @@ router.post('/signup', async (req, res) => {
         req.session.save(() => {
           req.session.user_id = user.id;
           req.session.loggedIn = true;
+          res.redirect('/project');
         });
-        res.redirect('/dashboard');
     } catch (err) {
         res.status(400).json(err);
     }
@@ -40,6 +40,7 @@ router.post('/login', async (req, res) => {
       if(user) {
         const isPasswordValid = user.checkPassword(password);
         if(isPasswordValid) {
+          req.session.save(() => {
           req.session.user_id = user.id;
           req.session.loggedIn = true;
           res.render('dashboard', {
@@ -49,8 +50,9 @@ router.post('/login', async (req, res) => {
             projects,
             user
           });
-        }
+        });
       }  
+    } 
     } catch (err) {
       res.status(400).json(err);
     }

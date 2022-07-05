@@ -4,7 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers/index');
 const helpers = require('./utils/helpers');
-
+const bodyParser = require('body-parser');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -21,7 +21,7 @@ const hbs = exphbs.create({
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  // cookie: { maxAge: 60000 },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -37,8 +37,8 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);

@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('/discussion', async (req, res) => {
+router.get('/discussion', withAuth, async (req, res) => {
     try {
         const dbDiscussionData = await Discussion.findAll({
           include: [
@@ -36,7 +36,7 @@ router.get('/discussion', async (req, res) => {
     // res.render('dashboard', { title : 'Dashboard', cssname: 'dashboard.css' });
 });
 
-router.get('/project', async (req, res) => {
+router.get('/project', withAuth, async (req, res) => {
     try {
         const dbProjectData = await Project.findAll({
             include: [
