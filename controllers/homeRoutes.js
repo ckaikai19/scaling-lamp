@@ -64,7 +64,6 @@ router.get('/project', withAuth, async (req, res) => {
     // res.render('dashboard', { title : 'Dashboard', cssname: 'dashboard.css' });
 });
 
-
 router.get('/login', async (req, res) => {
     res.render('login', { title : 'Login', cssname: 'signup.css' });
 });
@@ -73,5 +72,8 @@ router.get('/signup', async (req, res) => {
     res.render('signup', { title : 'Signup', cssname: 'signup.css' });
 });
 
+router.get('/chatroom', async (req, res) => {
+    res.render('chatroom', { title : 'Chatroom', cssname: 'chatroom.css' });
+});
 module.exports = router;
 
