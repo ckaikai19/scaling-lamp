@@ -8,13 +8,13 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('/dashboard', async (req, res) => {
+router.get('/discussion', async (req, res) => {
     try {
         const dbDiscussionData = await Discussion.findAll({
           include: [
             {
               model: User,
-              attributes: ['username'],
+              attributes: ['username', 'createdAt'],
             },
           ],
         });
@@ -36,6 +36,35 @@ router.get('/dashboard', async (req, res) => {
     // res.render('dashboard', { title : 'Dashboard', cssname: 'dashboard.css' });
 });
 
+router.get('/project', async (req, res) => {
+    try {
+        const dbProjectData = await Project.findAll({
+            include: [
+              {
+                model: User,
+                attributes: ['username', 'createdAt'],
+              },
+            ],
+          });
+      
+          const projects = dbProjectData.map((project) =>
+          project.get({ plain: true })
+          );
+    
+        res.render('dashboard', {
+            projects,
+            loggedIn: req.session.loggedIn,
+            title: 'Dashboard',
+            cssname: 'dashboard.css'         
+        });
+      } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+      }
+    // res.render('dashboard', { title : 'Dashboard', cssname: 'dashboard.css' });
+});
+
+
 router.get('/login', async (req, res) => {
     res.render('login', { title : 'Login', cssname: 'signup.css' });
 });
@@ -43,11 +72,6 @@ router.get('/login', async (req, res) => {
 router.get('/signup', async (req, res) => {
     res.render('signup', { title : 'Signup', cssname: 'signup.css' });
 });
-
-router.get('/chatroom', (req, res) => {
-    res.render('chatroom' , { title : 'Chatroom', cssname: 'chatroom.css' });
-});
-
 
 module.exports = router;
 

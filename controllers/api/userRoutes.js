@@ -1,29 +1,15 @@
 const router = require('express').Router();
-const { User, Discussion } = require('../../models');
+const { User, Discussion, Project } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/signup', async (req, res) => {
     try {
         const user = await User.create(req.body);
-        // const dbDiscussionData = await Discussion.findAll({
-        //   include: [
-        //     {
-        //       model: User,
-        //       attributes: ['username'],
-        //     },
-        //   ],
-        // });
 
         req.session.save(() => {
           req.session.user_id = user.id;
           req.session.loggedIn = true;
         });
-
-        // const discussions = dbDiscussionData.map((discussion) =>
-        // discussion.get({ plain: true })
-        // );
-    
-        //redirect to dashboard
         res.redirect('/dashboard');
     } catch (err) {
         res.status(400).json(err);
@@ -33,41 +19,49 @@ router.post('/signup', async (req, res) => {
 
 router.post('/login', async (req, res) => {
     try {
-      const userData = await User.findOne({ where: { username: req.body.username } });
-  
-      if (!userData) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect username or password, please try again' });
-        return;
-      }
-  
-      const validPassword = await userData.checkPassword(req.body.password);
-  
-      if (!validPassword) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
-        return;
-      }
-  
-      req.session.save(() => {
-        req.session.user_id = userData.id;
-        req.session.logged_in = true;
+      const dbProjectData = await Project.findAll({
+        include: [
+          {
+            model: User,
+            attributes: ['username', 'createdAt'],
+          },
+        ],
       });
-
-      res.redirect('/dashboard');
   
+      const projects = dbProjectData.map((project) =>
+      project.get({ plain: true })
+      );
+      const { username, password } = req.body;
+      const user = await User.findOne({
+        where: {
+          username,
+        },
+      });
+      if(user) {
+        const isPasswordValid = user.checkPassword(password);
+        if(isPasswordValid) {
+          req.session.user_id = user.id;
+          req.session.loggedIn = true;
+          res.render('dashboard', {
+            loggedIn: req.session.loggedIn,
+            title: 'Dashboard',
+            cssname: 'dashboard.css',
+            projects,
+            user
+          });
+        }
+      }  
     } catch (err) {
       res.status(400).json(err);
     }
   });
   
   router.post('/logout', (req, res) => {
-    if (req.session.logged_in) {
+    if (req.session) {
       req.session.destroy(() => {
-        res.status(204).end();
+        res.redirect('/');
       });
+      
     } else {
       res.status(404).end();
     }

@@ -30,5 +30,6 @@ document.getElementById('other-subject-button').addEventListener('click', ()=>{
 })
 
 
+
 create_button.addEventListener('click', ()=>{ create_box.style.display = 'flex';})
 exit_button.addEventListener('click', ()=>{create_box.style.display = 'none';})
