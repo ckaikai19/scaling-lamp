@@ -28,6 +28,10 @@ GitChat is a web-based service in which users can create, choose and comment on 
 * Insomnia
 * Handlebars js
 
+## Deployment
+
+https://project-communication-app.herokuapp.com/
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
