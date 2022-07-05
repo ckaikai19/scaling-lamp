@@ -457,3 +457,6 @@ textarea{
     width: 0px
   }
   
+a {
+    text-decoration:none;
+}
